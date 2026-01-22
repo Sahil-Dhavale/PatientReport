@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report | Rahul Sharma | MedQR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #f1f5f9;
+        }
+        .report-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .status-badge {
+            @apply px-2 py-0.5 rounded text-[10px] font-bold uppercase;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+            .report-card { border: none; shadow: none; }
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Hospital Header -->
+    <header class="bg-white border-b-4 border-blue-600 px-6 py-6 mb-6 shadow-sm">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <div class="bg-blue-600 p-3 rounded-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black text-slate-800 uppercase tracking-tight">Shree Sai Multispeciality Hospital</h1>
+                    <p class="text-blue-600 font-semibold">Pune, Maharashtra | <span class="text-slate-500 text-sm">Contact: +91-XXXXXXXXXX</span></p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-xs font-bold text-slate-400 uppercase">Report ID</p>
+                <p class="text-lg font-bold text-slate-800">HSP/OPD/2026/045</p>
+                <p class="text-sm text-slate-500 font-medium">Date: 15 January 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Sidebar: Personal Details -->
+        <aside class="lg:col-span-1 space-y-6">
+            <div class="report-card rounded-2xl p-6 shadow-sm border-t-4 border-blue-500">
+                <div class="text-center mb-6">
+                    <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=2563eb&color=fff&size=100" alt="Rahul Sharma" class="w-24 h-24 rounded-full mx-auto mb-3 border-2 border-slate-100">
+                    <h2 class="text-xl font-bold text-slate-800">Mr. Rahul Sharma</h2>
+                    <p class="text-sm text-slate-500">45 Years | Male | Office Accountant</p>
+                </div>
+
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between border-b border-slate-50 pb-2">
+                        <span class="text-slate-400">Blood Group</span>
+                        <span class="font-bold text-blue-600">B+</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-50 pb-2">
+                        <span class="text-slate-400">DOB</span>
+                        <span class="font-medium text-slate-700">10 March 1980</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-50 pb-2">
+                        <span class="text-slate-400">Status</span>
+                        <span class="font-medium text-slate-700">Married</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block mb-1 uppercase text-[10px] font-bold">Residential Address</span>
+                        <p class="text-slate-700 leading-snug">Flat No. 203, Shanti Residency, Near Ganesh Mandir, Karve Nagar, Pune – 411052</p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100">
+                        <p class="text-slate-400 block mb-1 uppercase text-[10px] font-bold">Emergency Contact</p>
+                        <p class="text-slate-700 font-bold">Mrs. Sunita Sharma (Wife)</p>
+                        <p class="text-blue-600">+91-9XXXXXXXXX</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vitals Card -->
+            <div class="bg-slate-800 rounded-2xl p-6 text-white shadow-lg">
+                <h3 class="text-xs font-bold text-slate-400 uppercase mb-4 flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    Clinical Vitals
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase">Temp</p>
+                        <p class="text-lg font-bold">100.2°F</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase">BP</p>
+                        <p class="text-lg font-bold">140/90</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase">SpO₂</p>
+                        <p class="text-lg font-bold">95%</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase">Pulse</p>
+                        <p class="text-lg font-bold">92 bpm</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-6">
+            
+            <!-- Diagnosis Summary -->
+            <div class="report-card rounded-2xl p-6 shadow-sm border-l-4 border-red-500">
+                <h3 class="text-sm font-bold text-red-600 uppercase mb-3 flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Final Diagnosis
+                </h3>
+                <ul class="text-slate-800 font-bold space-y-1">
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span> Acute Respiratory Infection
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span> Type 2 Diabetes Mellitus (Uncontrolled)
+                    </li>
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span> Hypertension
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Detailed Sections -->
+            <div class="report-card rounded-2xl overflow-hidden shadow-sm">
+                <div class="bg-slate-50 px-6 py-3 border-b border-slate-100">
+                    <h3 class="font-bold text-slate-700 text-sm">Clinical Presentation & History</h3>
+                </div>
+                <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-[10px] font-bold text-blue-600 uppercase mb-2">Chief Complaints</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Fever (5 days)</li>
+                            <li>• General weakness & body ache</li>
+                            <li>• Dry cough</li>
+                            <li>• Loss of appetite</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-[10px] font-bold text-blue-600 uppercase mb-2">Past Medical History</h4>
+                        <ul class="text-sm text-slate-600 space-y-1">
+                            <li>• Diabetes Type 2 (8 years)</li>
+                            <li>• Hypertension (5 years)</li>
+                            <li>• Regular Meds: Metformin, Amlodipine</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lab Results -->
+            <div class="report-card rounded-2xl overflow-hidden shadow-sm">
+                <div class="bg-slate-50 px-6 py-3 border-b border-slate-100">
+                    <h3 class="font-bold text-slate-700 text-sm">Laboratory Investigations</h3>
+                </div>
+                <div class="p-0">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-slate-50 text-slate-400 text-[10px] uppercase">
+                            <tr>
+                                <th class="px-6 py-3">Investigation</th>
+                                <th class="px-6 py-3">Result</th>
+                                <th class="px-6 py-3">Reference Range</th>
+                                <th class="px-6 py-3">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <!-- CBC -->
+                            <tr class="bg-blue-50/30 font-bold"><td colspan="4" class="px-6 py-2 text-[10px] text-blue-500 uppercase">Hematology (CBC)</td></tr>
+                            <tr>
+                                <td class="px-6 py-3 text-slate-700">Hemoglobin</td>
+                                <td class="px-6 py-3 font-semibold text-orange-600">12.5 g/dL</td>
+                                <td class="px-6 py-3">13.0 – 17.0</td>
+                                <td class="px-6 py-3"><span class="status-badge bg-orange-100 text-orange-600">Low</span></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 text-slate-700">WBC Count</td>
+                                <td class="px-6 py-3 font-semibold text-red-600">11,000 /cumm</td>
+                                <td class="px-6 py-3">4,000 – 10,000</td>
+                                <td class="px-6 py-3"><span class="status-badge bg-red-100 text-red-600">High</span></td>
+                            </tr>
+                            <!-- Diabetes -->
+                            <tr class="bg-blue-50/30 font-bold"><td colspan="4" class="px-6 py-2 text-[10px] text-blue-500 uppercase">Glycemic Profile</td></tr>
+                            <tr>
+                                <td class="px-6 py-3 text-slate-700">Fasting Blood Sugar</td>
+                                <td class="px-6 py-3 font-bold text-red-600">145 mg/dL</td>
+                                <td class="px-6 py-3">70 – 110</td>
+                                <td class="px-6 py-3"><span class="status-badge bg-red-100 text-red-600">Critical</span></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 text-slate-700">Post-Prandial (PP)</td>
+                                <td class="px-6 py-3 font-bold text-red-600">210 mg/dL</td>
+                                <td class="px-6 py-3">< 140</td>
+                                <td class="px-6 py-3"><span class="status-badge bg-red-100 text-red-600">Abnormal</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Treatment & Advice -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="report-card rounded-2xl p-6">
+                    <h3 class="text-sm font-bold text-slate-800 uppercase mb-4 border-b pb-2">Treatment Plan</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Antibiotics course as prescribed</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Antipyretics for fever management</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Maintain Metformin & Amlodipine</li>
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> Frequent hydration and bed rest</li>
+                    </ul>
+                </div>
+                <div class="report-card rounded-2xl p-6 bg-blue-600 text-white">
+                    <h3 class="text-sm font-bold uppercase mb-4 border-b border-blue-400 pb-2">Doctor's Advice</h3>
+                    <p class="text-sm leading-relaxed mb-4">Follow diabetic diet strictly. Monitor BP and sugar daily. Return for follow-up on Jan 22, 2026.</p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center font-bold">AD</div>
+                        <div>
+                            <p class="text-xs font-bold leading-none">Dr. Anil Deshmukh</p>
+                            <p class="text-[10px] opacity-75">MD (Medicine) | MMC/2012/45678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer / Branding -->
+    <footer class="max-w-5xl mx-auto mt-12 px-6 text-center text-slate-400 text-xs flex justify-between items-center no-print">
+        <p>© 2026 MedQR Digital Health Records. Secure & Verified.</p>
+        <div class="flex space-x-4">
+            <button class="hover:text-blue-600 font-bold uppercase">Download PDF</button>
+            <button class="hover:text-blue-600 font-bold uppercase">Share Securely</button>
+        </div>
+    </footer>
+
+</body>
+</html>
